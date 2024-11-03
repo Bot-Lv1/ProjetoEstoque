@@ -195,7 +195,7 @@ public class ClasseCursoMenu extends BaseMenu {
     private void ImprimirEmLinha(ClasseCurso curso){
         String msg = "Classe do Curso - ";
         msg += "Código: " + curso.getCodigo() + " | ";
-        msg += "Nome: " = curso.getNome() + " | ";
+        msg += "Nome: " + curso.getNome() + " | ";
         msg += "Descrição: " + curso.getDescricao() + " | ";
         msg += "Carga Horária: " + curso.getCargaHoraria();
         System.out.println(msg);
