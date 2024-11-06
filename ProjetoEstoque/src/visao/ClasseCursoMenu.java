@@ -115,7 +115,7 @@ public class ClasseCursoMenu extends BaseMenu {
        curso.setDescricao(descricao);
        curso.setCargaHoraria(cargaHoraria);
 
-       ClasseCurso cursoNovo = this.srv.Create(curso);
+       ClasseCurso cursoNovo = this.srv.Criar(curso);
        if (cursoNovo != null) {
             System.out.println("Classe de Curso adicionada com sucesso");
        }

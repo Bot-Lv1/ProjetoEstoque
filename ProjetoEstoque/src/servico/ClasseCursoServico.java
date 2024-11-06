@@ -13,7 +13,7 @@ public class ClasseCursoServico extends BaseServico<ClasseCurso> {
     }
 
     @Override
-    public ClasseCurso Create(ClasseCurso obj) {
+    public ClasseCurso Criar(ClasseCurso obj) {
         return this.repositorio.Create(obj);   
     }
     @Override
