@@ -1,6 +1,6 @@
 package dominio;
 
-public class ClasseCurso extends BaseCurso{
+public class ClasseCurso extends Curso{
 
     public ClasseCurso(){
         super();
