@@ -100,14 +100,14 @@ public class ClasseCursoMenu extends BaseMenu {
        Util.ClearConsole();
        System.out.println("Adionando...");
 
-       System.out.print("Informe o Nome da Classe do Curso: ");
+       System.out.print("Informe o Nome da Classe do Curso: "); 
        String nome = this.scanner.next();
 
-       System.out.print("Informe a Descrição da Classe do Curso: ");
+       System.out.print("Informe a Descrição da Classe do Curso: "); 
        String descricao = this.scanner.next();
 
-       System.out.print("Informe a Carga Horária da Classe do Curso: ");
-       int cargaHoraria = this.scanner.nextInt();
+       System.out.print("Informe a Carga Horária da Classe do Curso: "); 
+       int cargaHoraria = this.scanner.nextInt(); 
 
        ClasseCurso curso = new ClasseCurso();
        curso.setCodigo(0);
@@ -178,6 +178,9 @@ public class ClasseCursoMenu extends BaseMenu {
        ClasseCurso curso = this.srv.Ler(codigo);
        if (curso != null) {
             if (this.srv.Deletar(codigo) != null) {
+                System.out.println();
+                ImprimirEmLinha(curso);
+                System.out.println();
                 System.out.println("Classe do Curso removida com sucesso");
             }
             else{
