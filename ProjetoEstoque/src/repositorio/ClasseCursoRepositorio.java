@@ -10,23 +10,23 @@ public class ClasseCursoRepositorio
 
     public ClasseCursoRepositorio(){
         this.db = new ClasseCursoFakeDB();
-        this.BaseDeDados = this.db.getTabela();
+        this.FonteDeDados = this.db.getTabela();
     }
 
     @Override
     public ClasseCurso Create(ClasseCurso instancia) {
-       int pos = this.BaseDeDados.size() - 1;
-       ClasseCurso curso = this.BaseDeDados.get(pos);
+       int pos = this.FonteDeDados.size() - 1;
+       ClasseCurso curso = this.FonteDeDados.get(pos);
        int proxCodigo = curso.getCodigo() + 1;
 
        instancia.setCodigo(proxCodigo);
-       this.BaseDeDados.add(instancia);
+       this.FonteDeDados.add(instancia);
        return instancia;
     }
 
     @Override
     public ClasseCurso Read(int codigo) {
-        for (ClasseCurso curso : this.BaseDeDados){
+        for (ClasseCurso curso : this.FonteDeDados){
             if (curso.getCodigo() == codigo) {
                 return curso;
             }
@@ -50,7 +50,7 @@ public class ClasseCursoRepositorio
     public ClasseCurso Delete(int codigo) {
         ClasseCurso curso = this.Read(codigo);
         if (curso != null) {
-            this.BaseDeDados.remove(curso);
+            this.FonteDeDados.remove(curso);
             return curso;
         }
         else{

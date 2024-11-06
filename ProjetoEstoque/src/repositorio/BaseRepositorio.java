@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public abstract class BaseRepositorio<TDominio> {
 
-    protected ArrayList<TDominio> BaseDeDados;
+    protected ArrayList<TDominio> FonteDeDados;
     
     public abstract TDominio Create(TDominio instancia);
 
     public ArrayList<TDominio> ReadAll(){
-        return this.BaseDeDados;
+        return this.FonteDeDados;
     }
 
     public abstract TDominio Read(int codigo);
