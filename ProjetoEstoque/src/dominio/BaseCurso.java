@@ -1,7 +1,7 @@
 package dominio;
 
 
-public abstract class Curso{
+public abstract class BaseCurso{
     protected int codigo;
     protected String nome;
     protected String descricao;
@@ -32,9 +32,9 @@ public abstract class Curso{
         this.cargaHoraria = cargaHoraria;
     }
 
-    public Curso(){
+    public BaseCurso(){
     }
-    public Curso(int codigo, String nome, String descricao, int cargaHoraria){
+    public BaseCurso(int codigo, String nome, String descricao, int cargaHoraria){
         this.codigo = codigo;
         this.nome = nome;
         this.descricao = descricao;
